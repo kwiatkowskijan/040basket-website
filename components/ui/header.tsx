@@ -13,7 +13,7 @@ import {
 import { Facebook } from "lucide-react";
 import { Instagram } from "lucide-react";
 
-export default function Navbar() {
+export default function Header() {
   return (
     <header className="flex justify-between w-full px-4 py-2 fixed top-0 z-50 text-white">
       <Link href="/">
