@@ -10,16 +10,16 @@ export default function MainNav() {
         <Image src="/logo.svg" alt="Logo" width={70} height={35} />
       </Link>
       <nav className="flex items-center justify-center space-x-6">
-        <Link href="/" className="mx-4">
+        <Link href="/" className="mx-4 font-heading text-2xl">
           Strona Główna
         </Link>
-        <Link href="/o-nas" className="mx-4">
+        <Link href="/o-nas" className="mx-4 font-heading text-2xl">
           O Nas
         </Link>
-        <Link href="/treningi" className="mx-4">
+        <Link href="/treningi" className="mx-4 font-heading text-2xl">
           Treningi
         </Link>
-        <Link href="/kontakt" className="mx-4">
+        <Link href="/kontakt" className="mx-4 font-heading text-2xl">
           Kontakt
         </Link>
       </nav>
