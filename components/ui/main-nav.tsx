@@ -16,6 +16,9 @@ export default function MainNav() {
         <Link href="/o-nas" className="mx-4 font-heading text-2xl">
           O Nas
         </Link>
+        <Link href="/turnieje-3x3" className="mx-4 font-heading text-2xl">
+          Turnieje 3x3
+        </Link>
         <Link href="/treningi" className="mx-4 font-heading text-2xl">
           Treningi
         </Link>
