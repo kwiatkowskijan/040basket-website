@@ -34,7 +34,6 @@ export default function RootLayout({
       <body
         className={`${fontSans.variable} ${fontHeading.variable} ${fontMono.variable} antialiased`}
       >
-        <Header />
         {children}
       </body>
     </html>
