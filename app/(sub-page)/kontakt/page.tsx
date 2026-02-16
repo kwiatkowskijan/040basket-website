@@ -1,12 +1,17 @@
 import Image from "next/image";
 import PageTitle from "@/components/ui/page-title";
 import BackgroundLogo from "@/components/ui/background-logo";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kontakt",
+};
 
 export default function Contact() {
   return (
     <main>
       <BackgroundLogo />
-      <PageTitle title="Kontakt" />
+      <PageTitle />
       <section className="w-full container mx-auto flex flex-row justify-center items-center text-center min-h-100">
         <div className="w-1/2 flex align-top justify-start">
           <div className="w-1/3 flex justify-end border-r-4 border-primary pr-8">
