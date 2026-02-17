@@ -1,7 +1,11 @@
+// Next
 import Image from "next/image";
+import { Metadata } from "next";
+
+// Components
 import PageTitle from "@/components/ui/page-title";
 import BackgroundLogo from "@/components/ui/background-logo";
-import { Metadata } from "next";
+import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -32,7 +36,9 @@ export default function Contact() {
           </div>
         </div>
         <div className="w-1/2 h-full">
-          <div className="w-full h-2 bg-primary"></div>
+          <div className="w-full bg-primary p-8">
+            <ContactForm />
+          </div>
         </div>
       </section>
     </main>
