@@ -1,8 +1,8 @@
 "use client";
 
 // Libraries
-import { zodResolver } from "@hookform/resolvers/zod"
-import { Controller, useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
 
 // Shadcn UI
@@ -17,70 +17,113 @@ import {
   FieldSeparator,
   FieldSet,
   FieldTitle,
-} from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const formSchema = z.object({
   name: z.string().min(1, "Imie jest wymagane"),
   email: z.email("Niepoprawny adres email"),
   message: z.string().min(1, "Wiadomość jest wymagana"),
+  privacy: z.literal(true),
 });
 
 export function ContactForm() {
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
-    });
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+  });
 
-    function onSubmit(data: z.infer<typeof formSchema>) {
-        console.log(data);
-    }
+  function onSubmit(data: z.infer<typeof formSchema>) {
+    console.log(data);
+  }
 
-    return (
-        <form onSubmit={form.handleSubmit(onSubmit)}>
-            <FieldGroup>
-                <Controller
-                    name="name"
-                    control={form.control}
-                    render={({ field, fieldState }) => (
-                        <Field>
-                            <FieldLabel className="text-background">Imię</FieldLabel>
-                            <FieldContent>
-                                <Input {...field} />
-                            </FieldContent>
-                            {fieldState.error && <FieldError>{fieldState.error.message}</FieldError>}
-                        </Field>
-                    )}
+  return (
+    <form onSubmit={form.handleSubmit(onSubmit)}>
+      <FieldGroup>
+        <FieldLegend className="text-background font-semibold">
+          Napisz do nas
+        </FieldLegend>
+        <Controller
+          name="name"
+          control={form.control}
+          render={({ field, fieldState }) => (
+            <Field data-invalid={fieldState.invalid}>
+              <FieldLabel htmlFor="name">Imię</FieldLabel>
+              <FieldContent>
+                <Input id="name" {...field} aria-invalid={fieldState.invalid} />
+              </FieldContent>
+              {fieldState.error && (
+                <FieldError>{fieldState.error.message}</FieldError>
+              )}
+            </Field>
+          )}
+        />
+        <Controller
+          name="email"
+          control={form.control}
+          render={({ field, fieldState }) => (
+            <Field data-invalid={fieldState.invalid}>
+              <FieldLabel htmlFor="email">Email</FieldLabel>
+              <FieldContent>
+                <Input
+                  id="email"
+                  {...field}
+                  aria-invalid={fieldState.invalid}
                 />
-                <Controller
-                    name="email"
-                    control={form.control}
-                    render={({ field, fieldState }) => (
-                        <Field>
-                            <FieldLabel className="text-background">Email</FieldLabel>
-                            <FieldContent>
-                                <Input {...field} />
-                            </FieldContent>
-                            {fieldState.error && <FieldError>{fieldState.error.message}</FieldError>}
-                        </Field>
-                    )}
+              </FieldContent>
+              {fieldState.error && (
+                <FieldError>{fieldState.error.message}</FieldError>
+              )}
+            </Field>
+          )}
+        />
+        <Controller
+          name="message"
+          control={form.control}
+          render={({ field, fieldState }) => (
+            <Field data-invalid={fieldState.invalid}>
+              <FieldLabel htmlFor="message">Wiadomość</FieldLabel>
+              <FieldContent>
+                <Textarea
+                  id="message"
+                  {...field}
+                  className="resize-none"
+                  aria-invalid={fieldState.invalid}
                 />
-                <Controller
-                    name="message"
-                    control={form.control}
-                    render={({ field, fieldState }) => (
-                        <Field>
-                            <FieldLabel className="text-background">Wiadomość</FieldLabel>
-                            <FieldContent>
-                                <Textarea {...field} />
-                            </FieldContent>
-                            {fieldState.error && <FieldError>{fieldState.error.message}</FieldError>}
-                        </Field>
-                    )}
-                />
-                <Button type="submit" variant={"secondary"}>Wyślij</Button>
-            </FieldGroup>
-        </form>
-    );
+              </FieldContent>
+              {fieldState.error && (
+                <FieldError>{fieldState.error.message}</FieldError>
+              )}
+            </Field>
+          )}
+        />
+        <Controller
+          name="privacy"
+          control={form.control}
+          render={({ field }) => (
+            <Field orientation="horizontal">
+              <Checkbox
+                id="privacy"
+                checked={field.value}
+                onCheckedChange={field.onChange}
+              />
+              <FieldContent>
+                <FieldLabel htmlFor="privacy">
+                  Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
+                  kontaktu z nami.
+                </FieldLabel>
+              </FieldContent>
+            </Field>
+          )}
+        />
+        <Field orientation="horizontal">
+          <Button type="submit" variant={"secondary"} size={"lg"}>
+            Wyślij
+          </Button>
+        </Field>
+      </FieldGroup>
+    </form>
+  );
 }

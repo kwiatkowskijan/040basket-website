@@ -10,19 +10,19 @@ export default function MainNav() {
         <Image src="/logo.svg" alt="Logo" width={70} height={35} />
       </Link>
       <nav className="flex items-center justify-center space-x-6 uppercase">
-        <Link href="/" className="mx-4 font-heading text-2xl text-primary-foreground">
+        <Link href="/" className="mx-4 font-heading text-2xl text-primary-foreground hover:opacity-80">
           Strona Główna
         </Link>
-        <Link href="/o-nas" className="mx-4 font-heading text-2xl text-primary-foreground">
+        <Link href="/o-nas" className="mx-4 font-heading text-2xl text-primary-foreground hover:opacity-80">
           O Nas
         </Link>
-        <Link href="/turnieje-3x3" className="mx-4 font-heading text-2xl text-primary-foreground">
+        <Link href="/turnieje-3x3" className="mx-4 font-heading text-2xl text-primary-foreground hover:opacity-80">
           Turnieje 3x3
         </Link>
-        <Link href="/treningi" className="mx-4 font-heading text-2xl text-primary-foreground">
+        <Link href="/treningi" className="mx-4 font-heading text-2xl text-primary-foreground hover:opacity-80">
           Treningi
         </Link>
-        <Link href="/kontakt" className="mx-4 font-heading text-2xl text-primary-foreground">
+        <Link href="/kontakt" className="mx-4 font-heading text-2xl text-primary-foreground hover:opacity-80">
           Kontakt
         </Link>
       </nav>
