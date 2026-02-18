@@ -47,7 +47,7 @@ export default function News() {
       <BackgroundLogo />
       <PageTitle />
       <section className="w-full container mx-auto min-h-100">
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-2 lg:px-0 gap-8">
           {posts.map((post, index) => (
             <div className="w-full p-4 bg-primary flex flex-col items-start justify-center gap-4">
               <Image
