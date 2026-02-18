@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { Breadcrumbs } from "@/components/navigation/breadcrumbs";
 
 interface PageTitleProps {
   description?: string;

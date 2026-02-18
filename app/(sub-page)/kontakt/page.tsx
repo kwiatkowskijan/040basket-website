@@ -3,9 +3,9 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 // Components
-import PageTitle from "@/components/ui/page-title";
-import BackgroundLogo from "@/components/ui/background-logo";
-import { ContactForm } from "@/components/contact-form";
+import PageTitle from "@/components/sections/page-title";
+import BackgroundLogo from "@/components/sections/background-logo";
+import { ContactForm } from "@/components/features/contact-form";
 
 export const metadata: Metadata = {
   title: "Kontakt",
