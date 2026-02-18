@@ -42,7 +42,7 @@ export function ContactForm() {
   return (
     <form onSubmit={form.handleSubmit(onSubmit)}>
       <FieldGroup>
-        <FieldLegend className="text-background font-semibold">
+        <FieldLegend className="text-secondary font-semibold">
           Napisz do nas
         </FieldLegend>
         <Controller
