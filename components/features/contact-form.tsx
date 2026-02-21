@@ -27,12 +27,18 @@ const formSchema = z.object({
   name: z.string().min(1, "Imie jest wymagane"),
   email: z.email("Niepoprawny adres email"),
   message: z.string().min(1, "Wiadomość jest wymagana"),
-  privacy: z.literal(true),
+  privacy: z.boolean().refine((val) => val === true, "Zgoda jest wymagana"),
 });
 
 export function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+      privacy: false,
+    },
   });
 
   function onSubmit(data: z.infer<typeof formSchema>) {
@@ -55,7 +61,9 @@ export function ContactForm() {
                 <Input id="name" {...field} aria-invalid={fieldState.invalid} />
               </FieldContent>
               {fieldState.error && (
-                <FieldError>{fieldState.error.message}</FieldError>
+                <FieldError className="text-left">
+                  {fieldState.error.message}
+                </FieldError>
               )}
             </Field>
           )}
@@ -74,7 +82,9 @@ export function ContactForm() {
                 />
               </FieldContent>
               {fieldState.error && (
-                <FieldError>{fieldState.error.message}</FieldError>
+                <FieldError className="text-left">
+                  {fieldState.error.message}
+                </FieldError>
               )}
             </Field>
           )}
@@ -94,7 +104,9 @@ export function ContactForm() {
                 />
               </FieldContent>
               {fieldState.error && (
-                <FieldError>{fieldState.error.message}</FieldError>
+                <FieldError className="text-left">
+                  {fieldState.error.message}
+                </FieldError>
               )}
             </Field>
           )}
@@ -102,8 +114,8 @@ export function ContactForm() {
         <Controller
           name="privacy"
           control={form.control}
-          render={({ field }) => (
-            <Field orientation="horizontal">
+          render={({ field, fieldState }) => (
+            <Field orientation="horizontal" data-invalid={fieldState.invalid}>
               <Checkbox
                 id="privacy"
                 checked={field.value}
@@ -115,6 +127,9 @@ export function ContactForm() {
                   kontaktu z nami.
                 </FieldLabel>
               </FieldContent>
+              {fieldState.error && (
+                <FieldError>{fieldState.error.message}</FieldError>
+              )}
             </Field>
           )}
         />

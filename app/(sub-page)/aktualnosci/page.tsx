@@ -47,7 +47,7 @@ export default async function News() {
                 alt={post.title}
                 width={600}
                 height={400}
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
               />
               <h3 className="text-3xl font-bold text-background">
                 {post.title}
