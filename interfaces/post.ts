@@ -1,4 +1,4 @@
-export interface Post {
+export interface IPost {
   slug: string;
   title: string;
   date: string;
