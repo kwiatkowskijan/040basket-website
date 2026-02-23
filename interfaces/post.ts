@@ -4,4 +4,5 @@ export interface IPost {
   date: string;
   content: string;
   image: any;
+  excerpt?: string;
 }

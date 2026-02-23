@@ -16,10 +16,10 @@ export default function Post({ post }: { post: IPost }) {
         alt={post.title}
         width={600}
         height={400}
-        className="w-full h-full object-cover"
+        className="w-full max-h-64 object-cover"
       />
       <h3 className="text-3xl font-bold text-background">{post.title}</h3>
-      <p className="text-background line-clamp-3 min-h-18">{post.content}</p>
+      <p className="text-background line-clamp-3 min-h-18">{post.excerpt}</p>
       <div className="flex items-center justify-between w-full">
         <span className="text-sm text-background">{post.date} </span>
         <a href={`/aktualnosci/${post.slug}`}>

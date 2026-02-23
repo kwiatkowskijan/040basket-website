@@ -2,6 +2,18 @@ import { getApiURL } from "@/lib/utils";
 
 const root = getApiURL() + "/api";
 
+export async function getPostBySlug(slug: string) {
+  const url = `${root}/posts?filters[slug][$eq]=${slug}&populate=coverImage`;
+  const response = await fetch(url, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${process.env.READ_ONLY_API_TOKEN}`,
+    },
+  });
+  return await response.json().then((data) => data.data[0]);
+}
+
 export async function getPosts() {
   const url = `${root}/posts?populate=coverImage`;
   const response = await fetch(url, {

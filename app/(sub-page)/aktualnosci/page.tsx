@@ -18,12 +18,14 @@ export const metadata: Metadata = {
 
 export default async function Posts() {
   const response = await getPosts();
+
   const posts: IPost[] = response.map((post: any) => ({
     slug: post.slug,
     title: post.title,
     date: new Date(post.createdAt).toLocaleDateString("pl-PL"),
     content: post.content,
     image: post.coverImage.url,
+    excerpt: post.excerpt,
   }));
 
   return (
