@@ -27,8 +27,8 @@ export default function Header({ forceSolid }: NavbarProps) {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        isSolid ? "bg-primary" : "bg-transparent",
+        "top-0 left-0 w-full z-50 transition-all duration-300",
+        isSolid ? "sticky bg-primary" : "fixed bg-transparent",
       )}
     >
       <div className="container mx-auto flex items-center">
