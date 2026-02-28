@@ -29,10 +29,10 @@ export default function MainNav() {
           O Nas
         </Link>
         <Link
-          href="/turnieje-3x3"
+          href="/wydarzenia"
           className="mx-4 font-heading text-2xl text-primary-foreground hover:opacity-80"
         >
-          Turnieje 3x3
+          Wydarzenia
         </Link>
         <Link
           href="/treningi"
