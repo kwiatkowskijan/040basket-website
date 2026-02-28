@@ -29,10 +29,11 @@ export default async function EventsCalendar() {
   }));
   return (
     <main>
-      <BackgroundLogo />
       <PageTitle />
       <section className="w-full container mx-auto min-h-100">
-        <EventCalendar Events={events} />
+        <div className="w-full px-2 lg:px-0">
+          <EventCalendar Events={events} />
+        </div>
       </section>
     </main>
   );
