@@ -35,12 +35,6 @@ export default function MainNav() {
           Wydarzenia
         </Link>
         <Link
-          href="/treningi"
-          className="mx-4 font-heading text-2xl text-primary-foreground hover:opacity-80"
-        >
-          Treningi
-        </Link>
-        <Link
           href="/kontakt"
           className="mx-4 font-heading text-2xl text-primary-foreground hover:opacity-80"
         >

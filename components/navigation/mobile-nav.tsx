@@ -30,11 +30,14 @@ export default function MobileNav() {
             <Link href="/" className="mx-4">
               Strona Główna
             </Link>
+            <Link href="/aktualnosci" className="mx-4">
+              Aktualności
+            </Link>
             <Link href="/o-nas" className="mx-4">
               O Nas
             </Link>
-            <Link href="/treningi" className="mx-4">
-              Treningi
+            <Link href="/wydarzenia" className="mx-4">
+              Wydarzenia
             </Link>
             <Link href="/kontakt" className="mx-4">
               Kontakt
