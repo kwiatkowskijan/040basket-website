@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Inter, Barlow_Condensed } from "next/font/google";
+import { Geist_Mono, Inter, Anton } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/ui/header";
 
 const fontSans = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const fontHeading = Barlow_Condensed({
-  variable: "--font-barlow-condensed",
+const fontHeading = Anton({
+  variable: "--font-anton",
   subsets: ["latin"],
-  weight: ["600"],
+  weight: ["400"],
 });
 
 const fontMono = Geist_Mono({
