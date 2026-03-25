@@ -12,7 +12,7 @@ export default function HeroSection() {
         <p className="text-primary uppercase font-bold tracking-widest">
           Turniej koszykówki 3x3
         </p>
-        <h1 className="text-4xl md:text-6xl lg:text-9xl text-white mb-4 font-heading ">
+        <h1 className="text-5xl md:text-6xl lg:text-9xl text-white mb-4 font-heading ">
           040Basket <br />
           <span className="font-heading text-primary">Tournament 4.0</span>
         </h1>
@@ -26,7 +26,7 @@ export default function HeroSection() {
             Puszczykowo, 62-040
           </div>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col md:flex-row items-center gap-4">
           <Button variant={"default"} size={"lg"}>
             <Users />
             Zapisz swoją drużynę
