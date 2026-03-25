@@ -3,7 +3,7 @@ import { Calendar, Handshake, MapPin, Users } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <div className="w-full h-dvh relative">
+    <section className="w-full h-dvh relative">
       <video className="w-full h-full object-cover" autoPlay muted loop>
         <source src="/040_v2.mp4" type="video/mp4" />
       </video>
@@ -37,6 +37,6 @@ export default function HeroSection() {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
