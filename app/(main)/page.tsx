@@ -1,6 +1,7 @@
 import HeroSection from "@/components/sections/hero-section";
 import AboutEventSection from "@/components/sections/about-event-section";
 import RegisterTeamSection from "@/components/sections/register-team-section";
+import LastNewsSection from "@/components/sections/last-news-section";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <AboutEventSection />
       <RegisterTeamSection />
+      <LastNewsSection />
     </main>
   );
 }

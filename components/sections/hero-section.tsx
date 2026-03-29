@@ -9,10 +9,14 @@ export default function HeroSection() {
       </video>
       <div className="absolute inset-0 bg-black/65"></div>
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-8 text-center px-4">
-        <p className="text-primary uppercase font-bold tracking-widest">
-          Turniej koszykówki 3x3
+        <p className="relative inline-flex items-center px-6 py-2 uppercase font-bold tracking-widest">
+          <span
+            aria-hidden="true"
+            className="absolute inset-0 -skew-x-12 bg-secondary"
+          />
+          <span className="relative text-primary">Turniej koszykówki 3x3</span>
         </p>
-        <h1 className="text-5xl md:text-6xl lg:text-9xl text-white mb-4 font-heading ">
+        <h1 className="text-5xl md:text-6xl lg:text-9xl text-white mb-4 font-heading uppercase">
           040Basket <br />
           <span className="font-heading text-primary">Tournament 4.0</span>
         </h1>
