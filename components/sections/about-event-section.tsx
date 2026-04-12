@@ -1,5 +1,3 @@
-import { CalendarDays, Shield, Users } from "lucide-react";
-
 export default function AboutEventSection() {
   return (
     <section className="container mx-auto">
@@ -16,6 +14,7 @@ export default function AboutEventSection() {
           elektryzujące dni pełne rywalizacji, wspólnoty i kultury. Szybkie
           mecze, muzyka na żywo, food trucki i atmosfera, której nie zapomnisz.
         </p>
+      </div>
     </section>
   );
 }
