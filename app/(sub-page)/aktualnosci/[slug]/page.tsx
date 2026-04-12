@@ -35,7 +35,7 @@ export default async function Post({
   const safeHtml = DOMPurify.sanitize(post.content);
 
   return (
-    <main>
+    <>
       <section className="container w-full mx-auto min-h-100">
         <div className="w-full px-2 mx-auto my-8 lg:w-3/4 lg:px-0">
           <a
@@ -67,6 +67,6 @@ export default async function Post({
           <div dangerouslySetInnerHTML={{ __html: safeHtml }} />
         </div>
       </section>
-    </main>
+    </>
   );
 }

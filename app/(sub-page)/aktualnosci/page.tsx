@@ -29,16 +29,16 @@ export default async function Posts() {
   }));
 
   return (
-    <main>
+    <>
       <BackgroundLogo />
       <PageTitle />
-      <section className="w-full container mx-auto min-h-100">
+      <section className="w-full container mx-auto">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-2 lg:px-0 gap-8">
           {posts.map((post) => (
             <Post key={post.slug} post={post} />
           ))}
         </div>
       </section>
-    </main>
+    </>
   );
 }

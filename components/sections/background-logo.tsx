@@ -7,7 +7,8 @@ export default function BackgroundLogo() {
       alt="Kontakt"
       width={1920}
       height={1080}
-      className="w-full absolute -z-10"
+      sizes="100vw"
+      className="absolute inset-x-0 top-0 -z-10 mx-auto h-auto w-full max-h-dvh object-contain"
     />
   );
 }

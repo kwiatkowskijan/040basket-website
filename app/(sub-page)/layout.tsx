@@ -1,4 +1,5 @@
 import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 export default function MainLayout({
   children,
@@ -8,7 +9,8 @@ export default function MainLayout({
   return (
     <>
       <Header forceSolid />
-      {children}
+      <main className="min-h-dvh">{children}</main>
+      <Footer />
     </>
   );
 }

@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body
-        className={`${fontSans.variable} ${fontHeading.variable} ${fontMono.variable} antialiased`}
+        className={`${fontSans.variable} ${fontHeading.variable} ${fontMono.variable} antialiased min-h-dvh`}
       >
         {children}
       </body>

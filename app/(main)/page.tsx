@@ -6,12 +6,12 @@ import PartnersSection from "@/components/sections/partners-section";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <HeroSection />
       <AboutEventSection />
       <RegisterTeamSection />
       <LastNewsSection />
       <PartnersSection />
-    </main>
+    </>
   );
 }
