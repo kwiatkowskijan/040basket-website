@@ -23,18 +23,6 @@ export default function MainNav() {
           Aktualności
         </Link>
         <Link
-          href="/o-nas"
-          className="mx-4 font-heading text-2xl text-primary-foreground hover:opacity-80"
-        >
-          O Nas
-        </Link>
-        <Link
-          href="/wydarzenia"
-          className="mx-4 font-heading text-2xl text-primary-foreground hover:opacity-80"
-        >
-          Wydarzenia
-        </Link>
-        <Link
           href="/kontakt"
           className="mx-4 font-heading text-2xl text-primary-foreground hover:opacity-80"
         >
