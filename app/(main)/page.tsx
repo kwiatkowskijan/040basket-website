@@ -1,6 +1,7 @@
 import HeroSection from "@/components/sections/hero-section";
 import AboutEventSection from "@/components/sections/about-event-section";
 import RegisterTeamSection from "@/components/sections/register-team-section";
+import AdditionalAttractionsSection from "@/components/sections/additional-attractions-section";
 import LastNewsSection from "@/components/sections/last-news-section";
 import PartnersSection from "@/components/sections/partners-section";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <AboutEventSection />
       <RegisterTeamSection />
+      <AdditionalAttractionsSection />
       <LastNewsSection />
       <PartnersSection />
     </>
