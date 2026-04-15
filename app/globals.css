@@ -139,3 +139,9 @@
     @apply font-sans;
   }
 }
+
+@layer utilities {
+  .container {
+    max-width: 1200px;
+  }
+}
