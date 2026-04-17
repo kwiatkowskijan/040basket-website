@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <main>
+    <>
       <BackgroundLogo />
       <PageTitle />
       <section className="w-full container mx-auto min-h-100">
-        <div className="w-full flex flex-col px-2 md:flex-row justify-center items-center gap-16">
+        <div className="w-full flex flex-col p-2 md:flex-row justify-center items-center gap-16">
           <div className="w-full md:w-1/2 flex align-top justify-start">
             <div className="w-1/3 flex justify-end border-r-4 border-primary pr-8">
               <Image src="/logo.svg" alt="Logo" width={200} height={100} />
@@ -43,6 +43,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }

@@ -5,6 +5,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
 
+// Services
+import { sendContactForm } from "@/services/contact.service";
+
 // Shadcn UI
 import {
   Field,
@@ -41,8 +44,8 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    console.log(data);
+  async function onSubmit(data: z.infer<typeof formSchema>) {
+    await sendContactForm(data);
   }
 
   return (
@@ -115,20 +118,22 @@ export function ContactForm() {
           name="privacy"
           control={form.control}
           render={({ field, fieldState }) => (
-            <Field orientation="horizontal" data-invalid={fieldState.invalid}>
-              <Checkbox
-                id="privacy"
-                checked={field.value}
-                onCheckedChange={field.onChange}
-              />
-              <FieldContent>
+            <Field data-invalid={fieldState.invalid}>
+              <div className="flex flex-row items-start gap-3">
+                <Checkbox
+                  id="privacy"
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
                 <FieldLabel htmlFor="privacy">
                   Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
                   kontaktu z nami.
                 </FieldLabel>
-              </FieldContent>
+              </div>
               {fieldState.error && (
-                <FieldError>{fieldState.error.message}</FieldError>
+                <FieldError className="text-left mt-1">
+                  {fieldState.error.message}
+                </FieldError>
               )}
             </Field>
           )}
