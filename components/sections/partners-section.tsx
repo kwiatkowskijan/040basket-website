@@ -31,6 +31,26 @@ const partners: PartnerLogo[] = [
     src: "/logos/strojesportowe-logo.png",
     alt: "Logo StrojeSportowe.pl",
   },
+  {
+    name: "Heliosun",
+    src: "/logos/heliosun-logo.png",
+    alt: "Logo Heliosun",
+  },
+  {
+    name: "MPSystem",
+    src: "/logos/mpsystem-logo.png",
+    alt: "Logo MPSystem",
+  },
+  {
+    name: "GoldenGroup",
+    src: "/logos/goldengroup-logo.png",
+    alt: "Logo GoldenGroup",
+  },
+  {
+    name: "OrionExpress",
+    src: "/logos/orion-logo.png",
+    alt: "Logo OrionExpress",
+  },
 ];
 
 const mediaPatrons: PartnerLogo[] = [];
@@ -41,12 +61,8 @@ const partnerGroups: { title: string; logos: PartnerLogo[] }[] = [
     logos: organizers,
   },
   {
-    title: "Sponsorzy i Partnerzy",
+    title: "Partnerzy",
     logos: partners,
-  },
-  {
-    title: "Patroni medialni",
-    logos: mediaPatrons,
   },
 ];
 
@@ -66,14 +82,20 @@ export default function PartnersSection() {
                 {group.logos.map((logo) => (
                   <div
                     key={`${group.title}-${logo.name}`}
-                    className="flex h-28 items-center justify-center md:h-32"
+                    className={`flex items-center justify-center ${
+                      group.title === "Organizatorzy"
+                        ? "h-20 md:h-24"
+                        : "h-14 md:h-16"
+                    }`}
                   >
-                    <Image
+                    <img
                       src={logo.src}
                       alt={logo.alt}
-                      width={260}
-                      height={130}
-                      className={`h-auto max-h-18 w-auto max-w-36 object-contain sm:max-h-20 sm:max-w-40 md:max-h-22 md:max-w-44 ${logo.className ?? ""}`}
+                      className={`w-auto object-contain ${
+                        group.title === "Organizatorzy"
+                          ? "h-20 md:h-28 max-w-52"
+                          : "h-14 md:h-16 max-w-28"
+                      }`}
                     />
                   </div>
                 ))}
