@@ -1,19 +1,26 @@
 export default function AboutEventSection() {
   return (
     <section className="container mx-auto">
-      <div className="w-full py-16 flex flex-col items-center justify-center gap-8 text-center px-4">
-        <p className="text-primary uppercase font-bold tracking-widest">
-          Idea wydarzenia
-        </p>
-        <h2 className="text-3xl md:text-5xl text-center mb-8 font-heading uppercase">
-          Miejsce gdzie streetball <br />
-          spotyka rywalizację
-        </h2>
-        <p className="text-lg md:text-xl text-center max-w-3xl">
-          040Basket gromadzi najlepszych graczy koszykarki 3×3 na dwa
-          elektryzujące dni pełne rywalizacji, wspólnoty i kultury. Szybkie
-          mecze, muzyka na żywo, food trucki i atmosfera, której nie zapomnisz.
-        </p>
+      <div className="flex flex-col md:flex-row py-16 gap-8">
+        <div className="w-full md:w-1/2 flex flex-col items-start justify-center gap-8 px-4">
+          <p className="text-primary uppercase font-bold tracking-widest">
+            O wydarzeniu
+          </p>
+          <h2 className="text-3xl md:text-5xl text-left font-heading uppercase">
+            Miejsce gdzie streetball <br />
+            spotyka rywalizację
+          </h2>
+          <p className="text-left max-w-3xl">
+            040Basket Tournament 4.0. to czwarta edycja turnieju 3x3, który na
+            stałe wpisał się w koszykarski kalendarz regionu. Rywalizacja w
+            kategoriach Open i Kids, emocjonujący konkurs wsadów i wyjątkowa
+            atmosfera sprawiają, że to coś więcej niż turniej – to prawdziwe
+            święto basketu.
+          </p>
+        </div>
+        <div className="w-full md:w-1/2 flex items-center justify-center px-4">
+          <div className="w-full aspect-video bg-muted border-2 border-dashed border-foreground" />
+        </div>
       </div>
     </section>
   );

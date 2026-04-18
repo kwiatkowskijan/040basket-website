@@ -23,7 +23,7 @@ export default function HeroSection() {
         <div className="flex items-center gap-6 text-white">
           <div className="flex items-center gap-2">
             <Calendar />
-            15-16 lipca 2026
+            18-19 lipca 2026
           </div>
           <div className="flex items-center gap-2">
             <MapPin />
@@ -31,14 +31,14 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <Button variant={"default"} size={"lg"}>
+          {/* <Button variant={"default"} size={"lg"}>
             <Users />
             Zapisz swoją drużynę
           </Button>
           <Button variant={"outline"} size={"lg"}>
             <Handshake />
             Zostań partnerem
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>
