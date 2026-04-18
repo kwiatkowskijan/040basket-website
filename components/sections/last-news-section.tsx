@@ -19,7 +19,11 @@ export default async function LastNewsSection() {
   const posts: IPost[] = response.map((post: any) => ({
     slug: post.slug,
     title: post.title,
-    date: new Date(post.createdAt).toLocaleDateString("pl-PL"),
+    date: new Date(post.createdAt).toLocaleDateString("pl-PL", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
     content: post.content,
     image: post.coverImage.url,
     excerpt: post.excerpt,
