@@ -4,6 +4,7 @@ import { IPost } from "@/interfaces/post";
 // Components
 import { StrapiImage } from "@/components/strapi-image";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 // Lucide
 import { ArrowUpRight, Calendar } from "lucide-react";
@@ -39,14 +40,15 @@ export default function Post({ post }: { post: IPost }) {
             <Calendar className="h-3.5 w-3.5" />
             {post.date}
           </span>
-          <a
-            href={`/aktualnosci/${post.slug}`}
-            aria-label={`Czytaj więcej: ${post.title}`}
-            className="group/btn flex items-center gap-2 bg-primary px-4 py-2 text-primary-foreground transition-snap"
-          >
-            <span className="font-display text-sm tracking-wider">Czytaj</span>
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:rotate-45" />
-          </a>
+          <Button asChild className="group/btn bg-primary text-primary-foreground hover:bg-primary/90">
+            <Link
+              href={`/aktualnosci/${post.slug}`}
+              aria-label={`Czytaj więcej: ${post.title}`}
+            >
+              <span className="font-display text-sm tracking-wider">Czytaj</span>
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:rotate-45" />
+            </Link>
+          </Button>
         </div>
       </div>
     </article>
