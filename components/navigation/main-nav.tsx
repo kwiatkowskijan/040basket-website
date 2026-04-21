@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook } from "lucide-react";
-import { Instagram } from "lucide-react";
+import { siFacebook, siInstagram } from "simple-icons";
 
 export default function MainNav() {
   return (
@@ -36,7 +35,13 @@ export default function MainNav() {
           rel="noopener noreferrer"
           className="text-primary-foreground"
         >
-          <Facebook />
+          <svg
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+            fill={siFacebook.hex}
+            dangerouslySetInnerHTML={{ __html: siFacebook.svg }}
+          />
         </a>
         <a
           href="https://www.instagram.com/040basket/"
@@ -44,7 +49,13 @@ export default function MainNav() {
           rel="noopener noreferrer"
           className="text-primary-foreground"
         >
-          <Instagram />
+          <svg
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+            fill={siInstagram.hex}
+            dangerouslySetInnerHTML={{ __html: siInstagram.svg }}
+          />
         </a>
       </div>
     </div>
